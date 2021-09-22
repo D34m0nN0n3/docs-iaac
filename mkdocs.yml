@@ -43,6 +43,8 @@ extra_css:
 
 extra_javascript:
   - assets/extra.js
+  - assets/jquery.min.js
+  - assets/tables.js
   - assets/tex-mml-chtml.js
   - form/form.js
   - form/tabledynamic.js
