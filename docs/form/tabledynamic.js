@@ -1,106 +1,50 @@
-function addNewRow() {
-
-    var _row = $(".mdl-data-dynamictable tbody").find('tr');
-    var template = $('#basketItemTemplate').html();
-    var _newRow = template.replace(/{{id}}/gi, 'checkbox-' + new Date().getTime());
-  
-    $(".mdl-data-dynamictable tbody").append(_newRow);
-    componentHandler.upgradeAllRegistered();
+//helper для отрисовки названия цвета по его id
+Thelpers.select = function(value, arr) {
+    var res = arr.findItem('id', value);  
+    return (res) ? res.name : '';
+    return '';
+  };
+  //список цветов для select
+  var arr_colors = [
+    { id: 1, name: 'Красный'},     
+    { id: 2, name: 'Синий'},     
+    { id: 3, name: 'Зеленый'},     
+  ];  
+  //данные для таблицы
+  var datasource = [
+   {id: 125, firstname: 'Имя 1', lastname: 'Фамилия 1', color_id: 1},  
+   {id: 133, firstname: 'Имя 2', lastname: 'Фамилия 2', color_id: 2},      
+   {id: 143, firstname: 'Имя 3', lastname: 'Фамилия 3', color_id: 3},      
+   {id: 145, firstname: 'Имя 4', lastname: 'Фамилия 4', color_id: 2},      
+  ];
+  //редактирование записи в ячейке таблицы  
+  $('body').on('click', 'table td.edit', function(e) {      
+    if ($(e.target).closest('select, input, .btn-group, .btn, a').length) return;          
+    var tr = $(this).closest('tr');  
+    var ind = tr.data('index'); 
+    var type = $(this).data('type');
+    var field = $(this).data('field');
+    var source = $(this).data('source');
+    if (type=='textbox') {
+      $(this).html('<div data---="textbox__datasource[{0}].{1}__class:form-control input-sm;keypress:true;delay:1000;"></div>'.format(ind, field));
+    }
+    if (type=='dropdown') {
+      $(this).html('<div data---="dropdown__datasource[{0}].{1}__class:form-control input-sm;required:true;datasource:{2};text:name;value:id;type:number;"></div>'.format(ind, field, source));
+    }
+    COMPILE();               
+   }) 
+  //добавить запись
+  function addRow(e) {
+    if (!VALIDATE('form.*')) return; 
+    PUSH('datasource', form);
+    SET('form', null);
+    RESET('form.*');
   }
-  
-  var _isinvalid = false;
-  $(".add-row").on("click", function() {
-    $(".mdl-dialog__addContent").remove();
-    addNewRow();
-  });
-  var dialog = document.querySelector('dialog');
-  $(".remove-row").on("click", function() {
-    $(".mdl-dialog__addContent").remove();
-    
-    if ($(".mdl-data-dynamictable tbody").find('tr.is-selected').length != 0)
-      {
-        dialog.showModal();
-      }
-     
-   
-  
-  });
-  $(document).on("click", ".mdl-checkbox", function() {
-    var _tableRow = $(this).parents("tr:first");
-    if ($(this).hasClass("is-checked") === false) {
-      _tableRow.addClass("is-selected");
-    } else {
-      _tableRow.removeClass("is-selected");
-    }
-  
-  });
-  $(document).on("click", "#checkbox-all", function() {
-    _isChecked = $(this).parent("label").hasClass("is-checked");
-    if (_isChecked === false) {
-      $(".mdl-data-dynamictable").find('tr').addClass("is-selected");
-      $(".mdl-data-dynamictable").find('tr td label').addClass("is-checked");
-    } else {
-      $(".mdl-data-dynamictable").find('tr').removeClass("is-selected");
-      $(".mdl-data-dynamictable").find('tr td label').removeClass("is-checked");
-    }
-  
-  });
-  $(document).on("click", "span.mdl-data-table__label.add-table-content", function() {
-    var _modal, _pattern, _error = "";
-  
-    $(".mdl-dialog__addContent").remove();
-    if ($(this).parents("td:first").hasClass("mdl-data-table__cell--non-numeric") === false) {
-      _pattern = 'pattern="-?[0-9]*(\.[0-9]+)?"';
-      _error = "Please, add a numeric value.";
-    }
-  
-    var template = $('#addContentDialogTemplate').html();
-    _modal = template.replace(/{{title}}/, $(this).attr("title")).replace(/{{pattern}}/, _pattern).replace(/{{error}}/, _error);
-    $(this).parent().prepend(_modal);
-    componentHandler.upgradeDom();
-    $(".mdl-textfield__input").focus();
-  });
-  
-  $(document).on("click", ".close", function() {
-    $(this).parents(".mdl-dialog__addContent").remove();
-  });
-  
-  $(document).on("keydown", ".mdl-dialog__addContent", function(e) {
-    var code = (e.keyCode ? e.keyCode : e.which);
-    switch (code) {
-      case 13:
-        $(".save.mdl-button").click();
-        break;
-      case 27:
-        $(".close.mdl-button").click();
-        break;
-      default:
-    }
-  });
-  
-  $(document).on("click", ".save", function() {
-    var _textfield = $(this).parents("td").find(".mdl-textfield");
-    var _input = $(this).parents("td").find("input");
-    if (_textfield.hasClass("is-invalid") === false && $.trim(_input.val()) !== "") {
-      var _col = $(this).parents("td:first");
-      var value = _col.hasClass("price") ? "₺ " : "";
-      _col.html(value + _input.val());
-    }
-  });
-  
-   dialog.querySelector('.close').addEventListener('click', function() {
-        dialog.close();
-      });
-  dialog.querySelector('.remove').addEventListener('click', function() {
-         $(".mdl-data-dynamictable tbody").find('tr.is-selected').remove();
-    $(".mdl-data-dynamictable thead tr").removeClass("is-selected");
-    $(".mdl-data-dynamictable thead tr th label").removeClass("is-checked");
-    componentHandler.upgradeDom();
-    var _row = $(".mdl-data-dynamictable tbody").find('tr');
-    console.log("_row.length", _row.length);
-    if (_row.length < 1) {
-      addNewRow();
-    } dialog.close();
-      });
-  
+  //удалить запись
+  function remRow(e) {  
+    var tr = $(e).closest('tr');
+    var ind = tr.data('index'); 
+    datasource.splice(ind, 1);
+    UPDATE('datasource');   
+  }
   
