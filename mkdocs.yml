@@ -1,11 +1,11 @@
-site_name: "Создание systemd таймеров для запуска ansible-pull"
-site_url: "https://D34m0nN0n3.github.io/ansible-ssr-pull/"
+site_name: "Формы заявок на выделение ресурсов"
+site_url: "https://D34m0nN0n3.github.io/docs-iaac/"
 site_author: "Dmitriy Prigoda"
 site_description: >-
-  "Создание и активация сервиса и таймера ansible-pull"
+  "Формы заявок на выделение ресурсов"
 
-repo_name: D34m0nN0n3/ansible-ssr-pull
-repo_url: https://github.com/D34m0nN0n3/ansible-ssr-pull
+repo_name: D34m0nN0n3/docs-iaac
+repo_url: https://github.com/D34m0nN0n3/docs-iaac
 edit_uri: ""
 
 use_directory_urls: false
@@ -14,9 +14,7 @@ copyright: Copyright &copy; <a href="https://github.com/D34m0nN0n3">Dmitriy Prig
 
 nav:
     - 'Общее описание': 'index.md'
-    - 'Описание роли':
-        - 'ansible-pull': 'pull.md'
-    - 'Дополнительные материалы': 'seealso.md'
+    - 'Вычислительные ресурсы': 'computing_resources.md'
 
 plugins:
   - autolinks
@@ -36,7 +34,7 @@ plugins:
   - with-pdf:
       copyright: https://github.com/D34m0nN0n3
       cover_subtitle: ''
-      output_path: Create_systemd_units_for_ansible-pull.pdf
+      output_path: computing_resources.pdf
 
 extra_css:
     - assets/extra.css
