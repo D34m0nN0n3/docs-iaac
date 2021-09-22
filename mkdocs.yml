@@ -37,11 +37,15 @@ plugins:
       output_path: computing_resources.pdf
 
 extra_css:
-    - assets/extra.css
+  - assets/extra.css
+  - form/form.css
+  - form/tabledynamic.css
 
 extra_javascript:
   - assets/extra.js
   - assets/tex-mml-chtml.js
+  - form/form.js
+  - form/tabledynamic.js
 
 theme:
   name: material
