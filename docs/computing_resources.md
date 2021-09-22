@@ -2,106 +2,47 @@
 
 ## Информация об разработчике для предоставления доступа к ландшафтам
 
-<div class="mdl-grid" style="width:1000px;margin-top:100px;">
-  <div id="products" class="mdl-data-tabledynamic mdl-shadow--2dp">
-    <div class="mdl-data-tabledynamic__title">
-      <h2 class="mdl-data-tabledynamic__title-text">Products</h2>
-      <div class="mdl-data-tabledynamic__actions">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect add-row">
-                                            ADD
-                                        </a>
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect remove-row">
-                                            REMOVE
-                                        </a>
-      </div>
-
-    </div>
-
-    <div class="mdl-data-tabledynamic__content">
-      <table class="mdl-data-table mdl-data-dynamictable mdl-js-data-table mdl-shadow--2dp mdl-cell--6-col mdl-data-table__row--selectable">
-        <thead>
-
-          <tr>
-            <th>
-              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select" for="checkbox-all">
-                                                        <input type="checkbox" id="checkbox-all" class="mdl-checkbox__input">
-                                                    </label>
-            </th>
-            <th class="mdl-data-table__cell--non-numeric">Barcode</th>
-            <th class="mdl-data-table__cell--non-numeric">Product Name</th>
-            <th class="mdl-data-table__cell--non-numeric">Brand</th>
-            <th class="mdl-data-table__cell--non-numeric">Details</th>
-            <th>Quantity</th>
-            <th>Price</th>
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-8 center-block' style='float:none'>                 <h2>jComponent - редактируемая таблица</h2><hr>        
+      <table class='table table-bordered mv20'>
+        <thead> 
+          <tr> 
+            <th>#</th>
+            <th>id</th>
+            <th>Имя</th>
+            <th>Фамилия</th>                        
+            <th style='width:150px'>Цвет</th>                       
+            <th></th>                       
           </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select" for="checkbox-1">
-
-                                                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-                                                    </label>
-            </td>
-            <td style="text-align:left;"><span class="mdl-data-table__label add-table-content" title="barcode">Add barcode</span></td>
-            <td class="mdl-data-table__cell--non-numeric"><span class="mdl-data-table__label add-table-content" title="product name">Add product name</span></td>
-            <td class="mdl-data-table__cell--non-numeric"><span class="mdl-data-table__label add-table-content" title="brand">Add brand</span></td>
-            <td class="mdl-data-table__cell--non-numeric"><span class="mdl-data-table__label add-table-content" title="details">Add details</span></td>
-            <td><span class="mdl-data-table__label add-table-content" title="quantity">Add Quantity</span></td>
-            <td class="price"><span class="mdl-data-table__label add-table-content" title="price">Add Price</span></td>
+        </thead>    
+        <tbody data-jc="repeater__datasource" >           
+          <script type="text/html">
+            <tr data-index="$index">
+              <td>{{index+1}}</td>
+              <td>{{id}}</td>
+              <td class='edit' data-type='textbox' data-field='firstname'>{{firstname}}</td>
+              <td class='edit' data-type='textbox' data-field='lastname'>{{lastname}}</td>
+              <td class='edit' data-type='dropdown' data-field='color_id' data-source='arr_colors'>{{color_id|select(arr_colors)}}</td>
+              <td><button type='button' class='btn btn-danger btn-flat btn-xs' data-bind="rem__click:remRow"  data-id='$index' title='Удалить запись'><i class='fa fa-fw fa-remove'></i></button></td>        
+            </tr>
+          </script> 
+        </tbody>  
+        <tfooter> 
+          <tr> 
+            <th></th>
+            <th><div data---="textbox__form.id__required:true;type:number;placeholder:id;class:form-control input-sm;"></div></th>
+            <th><div data---="textbox__form.firstname__required:true;placeholder:Имя;class:form-control input-sm;"></div></th>
+            <th><div data---="textbox__form.lastname__required:true;placeholder:Фамилия;class:form-control input-sm;"></div></th>   
+            <th><div data---="dropdown__form.color_id__required:true;datasource:arr_colors;text:name;value:id;type:number;class:form-control input-sm;"></div></th>   
+            <th><button type='button' class='btn btn-primary btn-flat btn-xs' data-bind="rem__click:addRow"  data-id='$index' title='Добавить запись'><i class='fa fa-fw fa-plus'></i></button></th>                        
           </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-
-  </div>
-</div>
-<dialog class="mdl-dialog">
-  <h4 class="mdl-dialog__title">Remove Products</h4>
-  <div class="mdl-dialog__content">
-    <p>
-      Selected products will be removed. Are you sure?
-    </p>
-  </div>
-  <div class="mdl-dialog__actions">
-    <button type="button" class="mdl-button remove">Yes</button>
-    <button type="button" class="mdl-button close">Cancel</button>
-  </div>
-</dialog>
-<script type="text/template" id="addContentDialogTemplate">
-  <div class="mdl-dialog__addContent mdl-shadow--2dp">
-    <h3 class="mdl-dialog__title">Add {{title}}</h3>
-    <div class="mdl-dialog__content">
-      <div class="mdl-textfield mdl-js-textfield">
-        <input class="mdl-textfield__input" type="text" id="content" {{pattern}}>
-        <label class="mdl-textfield__label" for="content"></label>
-        <span class="mdl-textfield__error">{{error}} </span>
-      </div>
-    </div>
-    <div class="mdl-dialog__actions">
-      <button type="button" class="save mdl-button mdl-button--colored mdl-color-text--red-500">Save</button>
-      <button type="button" class="close mdl-button mdl-button--colored mdl-color-text--red-500">Cancel</button>
+        </tfooter>    
+      </table>          
     </div>
   </div>
-</script>
+</div>  
 
-<script type="text/template" id="basketItemTemplate">
-  <tr>
-    <td>
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select" for="{{id}}">
-                        <input type="checkbox" id="{{id}}" class="mdl-checkbox__input">
-                    </label>
-    </td>
-    <td style="text-align:left;"><span class="mdl-data-table__label add-table-content" title="barcode">Add barcode</span></td>
-    <td class="mdl-data-table__cell--non-numeric"><span class="mdl-data-table__label add-table-content" title="product name">Add product name</span></td>
-    <td class="mdl-data-table__cell--non-numeric"><span class="mdl-data-table__label add-table-content" title="brand">Add brand</span></td>
-    <td class="mdl-data-table__cell--non-numeric"><span class="mdl-data-table__label add-table-content" title="details">Add details</span></td>
-    <td><span class="mdl-data-table__label add-table-content" title="quantity">Add quantity</span></td>
-    <td class="price"><span class="mdl-data-table__label add-table-content" title="price">Add price</span></td>
-  </tr>
-</script>
 ## Информация для открытия сетевого доступа
 
 ## Информация об вычислительных и информационных ресурсах
