@@ -21,10 +21,8 @@
         <td><input type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd1"></td>
         <td><input type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd1"></td>
     </tr>
-    <tr>
-        <input type="button" id="add" value="Add" onclick="Javascript:addRow()">
-    </tr>
 </table>
+        <input type="button" id="add" value="Add" onclick="Javascript:addRow()">
 </div>
 <div id="mydata">
 <b>Веденные данные...</b>
