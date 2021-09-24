@@ -19,8 +19,10 @@
         <td><input type="number" maxlength="3" step="2" min="2" max="256" required placeholder="Гб" id="mem"></td>
         <td><input type="number" maxlength="4" step="10" min="50" max="1030" required placeholder="Гб" id="hdd1"></td>
         <td><input type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd1"></td>
-        <td><input type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd1">
-        <input type="button" id="add" value="Add" onclick="Javascript:addRow()"></td>
+        <td><input type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd1"></td>
+    </tr>
+    <tr>
+        <input type="button" id="add" value="Add" onclick="Javascript:addRow()">
     </tr>
 </table>
 </div>
