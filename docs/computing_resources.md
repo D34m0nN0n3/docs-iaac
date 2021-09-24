@@ -6,12 +6,12 @@
 <b>Ведите данные...</b>
 <table>
     <tr>
-        <td>NAME</td>
-        <td>CPU</td>
-        <td>MEMORY</td>
-        <td>HDD 1</td>
-        <td>HDD 2</td>
-        <td>HDD 3</td>
+        <td>NAME VM</td>
+        <td>CPU CORE</td>
+        <td>MEMORY GB</td>
+        <td>HDD 1 GB</td>
+        <td>HDD 2 GB</td>
+        <td>HDD 3 GB</td>
     </tr>
     <tr>
         <td><input type="text" placeholder="Имя VM" id="name"></td>
@@ -22,7 +22,7 @@
         <td><input type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd1"></td>
     </tr>
 </table>
-        <input type="button" id="add" value="Add" onclick="Javascript:addRow()">
+<input type="button" id="add" value="Add" onclick="Javascript:addRow()">
 </div>
 <div id="mydata">
 <b>Веденные данные...</b>
