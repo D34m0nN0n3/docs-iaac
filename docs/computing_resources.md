@@ -31,9 +31,9 @@
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd4"></td>
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd5"></td>
         <td><input type="text" placeholder="VLAN ID" id="vlan1"></td>
-        <td style="width:150px"><input type="text" placeholder="IP address" id="ip1"></td>
-        <td style="width:150px"><input type="text" placeholder="Net mask" id="mask1"></td>
-        <td style="width:150px"><input type="text" placeholder="Gateway" id="gw1"></td>
+        <td style="width:150px"><input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="ip1"></td>
+        <td style="width:150px"><input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="Net mask" id="mask1"></td>
+        <td style="width:150px"><input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="Gateway" id="gw1"></td>
     </tr>
 </table>
 <input type="button" id="add" value="Добавить веденные данные в таблицу" onclick="Javascript:addRow()">
