@@ -6,19 +6,19 @@
 <b>Ведите данные...</b>
 <table>
     <tr>
-        <th>Тип заявки</th>
-        <th>Название VM</th>
-        <th>Количество ядер CPU</th>
-        <th>Объем RAM в Гб</th>
-        <th>Объем HDD 1 в Гб</th>
+        <th>Тип заявки *</th>
+        <th>Название VM *</th>
+        <th>Количество ядер CPU *</th>
+        <th>Объем RAM в Гб *</th>
+        <th>Объем HDD 1 в Гб *</th>
         <th>Объем HDD 2 в Гб</th>
         <th>Объем HDD 3 в Гб</th>
         <th>Объем HDD 4 в Гб</th>
         <th>Объем HDD 5 в Гб</th>
-        <th>VLAN ID интерфейс 1</th>
-        <th>IP address интерфейс 1</th>
-        <th>Маска сети интерфейс 1</th>
-        <th>Шлюз по умолчанию интерфейс 1</th>
+        <th>VLAN ID интерфейс 1 *</th>
+        <th>IP address интерфейс 1 *</th>
+        <th>Маска сети интерфейс 1 *</th>
+        <th>Шлюз по умолчанию интерфейс 1 *</th>
     </tr>
     <tr>
         <td style="min-width:250px"><select name="type" id="type" tabindex="0"><option value="">Выберите из списка</option><option value="выделение">Выделение</option><option value="добавление">Добавление</option><option value="возврат">Возврат</option></select></td>
