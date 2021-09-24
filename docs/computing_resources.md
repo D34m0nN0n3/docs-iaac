@@ -30,13 +30,13 @@
 <b>Веденные данные...</b>
 <table id="myTableData"  border="1" cellpadding="2">
     <tr>
-        <td>&nbsp;</td>
         <td><b>NAME VM</b></td>
         <td><b>CPU</b></td>
         <td><b>RAM</b></td>
         <td><b>HDD 1</b></td>
         <td><b>HDD 2</b></td>
         <td><b>HDD 3</b></td>
+        <td>&nbsp;</td>
     </tr>
 </table>
 &nbsp;
