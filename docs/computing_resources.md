@@ -6,13 +6,13 @@
 <b>Ведите данные...</b>
 <table>
     <tr>
-        <td>Тип заявки</td>
-        <td>Название VM</td>
-        <td>Количество ядер CPU</td>
-        <td>Объем RAM в Гб</td>
-        <td>Объем HDD 1 в Гб</td>
-        <td>Объем HDD 2 в Гб</td>
-        <td>Объем HDD 3 в Гб</td>
+        <th>Тип заявки</th>
+        <th>Название VM</th>
+        <th>Количество ядер CPU</th>
+        <th>Объем RAM в Гб</th>
+        <th>Объем HDD 1 в Гб</th>
+        <th>Объем HDD 2 в Гб</th>
+        <th>Объем HDD 3 в Гб</th>
     </tr>
     <tr>
         <td><select name="type" id="type" tabindex="0"><option value="">Выберите из списка</option><option value="выделения">Выделения</option><option value="добавления">Добавления/возврата</option><option value="возврата">Возврата</option></select></td>
