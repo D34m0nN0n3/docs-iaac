@@ -21,8 +21,8 @@
         <th>Шлюз по умолчанию интерфейс 1</th>
     </tr>
     <tr>
-        <td style="width:250px"><select name="type" id="type" tabindex="0"><option value="">Выберите из списка</option><option value="выделение">Выделение</option><option value="добавление">Добавление</option><option value="возврат">Возврат</option></select></td>
-        <td style="width:300px"><input type="text" placeholder="Имя VM" id="name"></td>
+        <td style="min-width:250px"><select name="type" id="type" tabindex="0"><option value="">Выберите из списка</option><option value="выделение">Выделение</option><option value="добавление">Добавление</option><option value="возврат">Возврат</option></select></td>
+        <td style="min-width:300px"><input type="text" placeholder="Имя VM" id="name"></td>
         <td><input class="mod" type="number" maxlength="2" step="1" min="1" max="20" required placeholder="ШТ" id="cpu"></td>
         <td><input class="mod" type="number" maxlength="3" step="2" min="2" max="256" required placeholder="Гб" id="ram"></td>
         <td><input class="mod" type="number" maxlength="4" step="10" min="50" max="1030" required placeholder="Гб" id="hdd1"></td>
@@ -44,7 +44,7 @@
 <b>Веденные данные...</b>
 <table id="myTableData" cellpadding="2">
     <tr>
-        <td style="width:300px"><b>NAME VM</b></td>
+        <td style="min-width:300px"><b>NAME VM</b></td>
         <td><b>CPU</b></td>
         <td><b>RAM</b></td>
         <td><b>HDD 1</b></td>
@@ -53,9 +53,9 @@
         <td><b>HDD 4</b></td>
         <td><b>HDD 5</b></td>
         <td><b>VLAN ID</b></td>
-        <td style="width:150px"><b>IP ADDRESS</b></td>
-        <td style="width:150px"><b>NET MASK</b></td>
-        <td style="width:150px"><b>GATEWAAY</b></td>
+        <td style="min-width:150px"><b>IP ADDRESS</b></td>
+        <td style="min-width:150px"><b>NET MASK</b></td>
+        <td style="min-width:150px"><b>GATEWAAY</b></td>
         <td>&nbsp;</td>
     </tr>
 </table>
