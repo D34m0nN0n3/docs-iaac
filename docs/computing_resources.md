@@ -50,6 +50,12 @@
         <td><b>HDD 1</b></td>
         <td><b>HDD 2</b></td>
         <td><b>HDD 3</b></td>
+        <td><b>HDD 4</b></td>
+        <td><b>HDD 5</b></td>
+        <td><b>VLAN ID</b></td>
+        <td><b>IP ADDRESS</b></td>
+        <td><b>NET MASK</b></td>
+        <td><b>GATEWAAY</b></td>
         <td>&nbsp;</td>
     </tr>
 </table>
