@@ -25,7 +25,7 @@
         </tr>
         <td><input type="text" placeholder="Имя VM" id="name"></td>
         <td><input class="mod" type="number" maxlength="2" step="1" min="1" max="20" required placeholder="ШТ" id="cpu"></td>
-        <td><input class="mod" type="number" maxlength="3" step="2" min="2" max="256" required placeholder="Гб" id="mem"></td>
+        <td><input class="mod" type="number" maxlength="3" step="2" min="2" max="256" required placeholder="Гб" id="ram"></td>
         <td><input class="mod" type="number" maxlength="4" step="10" min="50" max="1030" required placeholder="Гб" id="hdd1"></td>
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd1"></td>
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd1"></td>
@@ -38,10 +38,10 @@
 <table id="myTableData"  border="1" cellpadding="2">
     <tr>
         <td>&nbsp;</td>
-        <td>NAME VM</td>
-        <td><b>NAME</b></td>
+        <td><b>TYPE</b></td>
+        <td><b>NAME VM</b></td>
         <td><b>CPU</b></td>
-        <td><b>MEMORY</b></td>
+        <td><b>RAM</b></td>
         <td><b>HDD 1</b></td>
         <td><b>HDD 2</b></td>
         <td><b>HDD 3</b></td>
