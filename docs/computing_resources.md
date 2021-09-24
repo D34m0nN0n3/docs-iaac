@@ -15,14 +15,7 @@
         <td>Объем HDD 3 в Гб</td>
     </tr>
     <tr>
-        <tr>
-            <select name="type" id="type" tabindex="0">
-              <option value="">Выберите из списка</option>
-              <option value="выделения">Выделения</option>
-              <option value="добавления">Добавления/возврата</option>
-              <option value="возврата">Возврата</option>
-            </select>
-        </tr>
+        <tr><select name="type" id="type" tabindex="0"><option value="">Выберите из списка</option><option value="выделения">Выделения</option><option value="добавления">Добавления/возврата</option><option value="возврата">Возврата</option></select></tr>
         <td><input type="text" placeholder="Имя VM" id="name"></td>
         <td><input class="mod" type="number" maxlength="2" step="1" min="1" max="20" required placeholder="ШТ" id="cpu"></td>
         <td><input class="mod" type="number" maxlength="3" step="2" min="2" max="256" required placeholder="Гб" id="ram"></td>
@@ -38,7 +31,6 @@
 <table id="myTableData"  border="1" cellpadding="2">
     <tr>
         <td>&nbsp;</td>
-        <td><b>TYPE</b></td>
         <td><b>NAME VM</b></td>
         <td><b>CPU</b></td>
         <td><b>RAM</b></td>
