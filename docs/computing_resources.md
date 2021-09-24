@@ -6,14 +6,23 @@
 <b>Ведите данные...</b>
 <table>
     <tr>
-        <td>NAME VM</td>
-        <td>CPU CORE</td>
-        <td>MEMORY GB</td>
-        <td>HDD 1 GB</td>
-        <td>HDD 2 GB</td>
-        <td>HDD 3 GB</td>
+        <td>Тип заявки</td>
+        <td>Название VM</td>
+        <td>Количество ядер CPU</td>
+        <td>Объем RAM в Гб</td>
+        <td>Объем HDD 1 в Гб</td>
+        <td>Объем HDD 2 в Гб</td>
+        <td>Объем HDD 3 в Гб</td>
     </tr>
     <tr>
+        <tr>
+            <select name="type" id="type" tabindex="0">
+              <option value="">Выберите из списка</option>
+              <option value="выделения">Выделения</option>
+              <option value="добавления">Добавления/возврата</option>
+              <option value="возврата">Возврата</option>
+            </select>
+        </tr>
         <td><input type="text" placeholder="Имя VM" id="name"></td>
         <td><input class="mod" type="number" maxlength="2" step="1" min="1" max="20" required placeholder="ШТ" id="cpu"></td>
         <td><input class="mod" type="number" maxlength="3" step="2" min="2" max="256" required placeholder="Гб" id="mem"></td>
@@ -29,6 +38,7 @@
 <table id="myTableData"  border="1" cellpadding="2">
     <tr>
         <td>&nbsp;</td>
+        <td>NAME VM</td>
         <td><b>NAME</b></td>
         <td><b>CPU</b></td>
         <td><b>MEMORY</b></td>
