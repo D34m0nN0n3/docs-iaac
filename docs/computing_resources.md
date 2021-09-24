@@ -62,10 +62,6 @@
 &nbsp;
  
 </div>
-<div id="myDynamicTable">
-<input type="button" id="create" value="Click here" onclick="Javascript:addTable()">
-to create a Table and add some data using JavaScript
-</div>
 
 ## Информация для открытия сетевого доступа
 
