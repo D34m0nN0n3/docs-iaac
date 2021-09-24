@@ -44,19 +44,19 @@
 <b>Веденные данные...</b>
 <table id="myTableData" cellpadding="2">
     <tr>
-        <td style="min-width:300px"><b>NAME VM</b></td>
-        <td><b>CPU</b></td>
-        <td><b>RAM</b></td>
-        <td><b>HDD 1</b></td>
-        <td><b>HDD 2</b></td>
-        <td><b>HDD 3</b></td>
-        <td><b>HDD 4</b></td>
-        <td><b>HDD 5</b></td>
-        <td><b>VLAN ID</b></td>
-        <td style="min-width:180px"><b>IP ADDRESS</b></td>
-        <td style="min-width:180px"><b>NET MASK</b></td>
-        <td style="min-width:180px"><b>GATEWAAY</b></td>
-        <td>&nbsp;</td>
+        <th style="min-width:300px"><b>NAME VM</b></th>
+        <th><b>CPU</b></th>
+        <th><b>RAM</b></th>
+        <th><b>HDD 1</b></th>
+        <th><b>HDD 2</b></th>
+        <th><b>HDD 3</b></th>
+        <th><b>HDD 4</b></th>
+        <th><b>HDD 5</b></th>
+        <th><b>VLAN ID</b></th>
+        <th style="min-width:180px"><b>IP ADDRESS</b></th>
+        <th style="min-width:180px"><b>NET MASK</b></th>
+        <th style="min-width:180px"><b>GATEWAAY</b></th>
+        <th>&nbsp;</th>
     </tr>
 </table>
 &nbsp;
