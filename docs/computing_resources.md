@@ -13,6 +13,12 @@
         <th>Объем HDD 1 в Гб</th>
         <th>Объем HDD 2 в Гб</th>
         <th>Объем HDD 3 в Гб</th>
+        <th>Объем HDD 4 в Гб</th>
+        <th>Объем HDD 5 в Гб</th>
+        <th>VLAN ID интерфейс 1</th>
+        <th>IP address интерфейс 1</th>
+        <th>Маска сети интерфейс 1</th>
+        <th>Шлюз по умолчанию интерфейс 1</th>
     </tr>
     <tr>
         <td><select name="type" id="type" tabindex="0"><option value="">Выберите из списка</option><option value="выделение">Выделение</option><option value="добавление">Добавление</option><option value="возврат">Возврат</option></select></td>
@@ -22,6 +28,12 @@
         <td><input class="mod" type="number" maxlength="4" step="10" min="50" max="1030" required placeholder="Гб" id="hdd1"></td>
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd2"></td>
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd3"></td>
+        <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd4"></td>
+        <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd5"></td>
+        <td><input type="text" placeholder="VLAN ID" id="vlan1"></td>
+        <td><input type="text" placeholder="IP address" id="ip1"></td>
+        <td><input type="text" placeholder="Net mask" id="mask1"></td>
+        <td><input type="text" placeholder="Gateway" id="gw1"></td>
     </tr>
 </table>
 <input type="button" id="add" value="Добавить веденные данные в таблицу" onclick="Javascript:addRow()">

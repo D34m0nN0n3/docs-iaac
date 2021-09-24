@@ -6,6 +6,12 @@ function addRow() {
     var HDD1 = document.getElementById("hdd1");
     var HDD2 = document.getElementById("hdd2");
     var HDD3 = document.getElementById("hdd3");
+    var HDD4 = document.getElementById("hdd4");
+    var HDD5 = document.getElementById("hdd5");
+    var VLAN1 = document.getElementById("vlan1");
+    var IP1 = document.getElementById("ip1");
+    var MASK1 = document.getElementById("mask1");
+    var GW1 = document.getElementById("gw1");
     var table = document.getElementById("myTableData");
  
     var rowCount = table.rows.length;
@@ -17,7 +23,13 @@ function addRow() {
     row.insertCell(3).innerHTML= HDD1.value;
     row.insertCell(4).innerHTML= HDD2.value;
     row.insertCell(5).innerHTML= HDD3.value;
-    row.insertCell(6).innerHTML= '<input type="button" value = "Удалить" onClick="Javacsript:deleteRow(this)">';
+    row.insertCell(6).innerHTML= HDD4.value;
+    row.insertCell(7).innerHTML= HDD5.value;
+    row.insertCell(8).innerHTML= VLAN1.value;
+    row.insertCell(9).innerHTML= IP1.value;
+    row.insertCell(10).innerHTML= MASK1.value;
+    row.insertCell(11).innerHTML= GW1.value;
+    row.insertCell(12).innerHTML= '<input type="button" value = "Удалить" onClick="Javacsript:deleteRow(this)">';
     
 }
  
