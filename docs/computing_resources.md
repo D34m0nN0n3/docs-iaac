@@ -25,9 +25,9 @@
     </tr>
 </table>
 <input type="button" id="add" value="Добавить веденные данные в таблицу" onclick="Javascript:addRow()">
+&nbsp;
+ 
 </div>
-<b>&nbsp;</b>
-<b>&nbsp;</b>
 <div id="mydata">
 <b>Веденные данные...</b>
 <table id="myTableData"  border="1" cellpadding="2">
