@@ -3,7 +3,7 @@
 ## Информация об разработчике для предоставления доступа к ландшафтам
 
 <div id="myform">
-<b>Simple form with name and age ...</b>
+<b>Ведите данные...</b>
 <table>
     <tr>
         <td>NAME</td>
@@ -20,12 +20,12 @@
         <td><input type="number" maxlength="4" step="10" min="50" max="1030" id="hdd1"></td>
         <td><input type="number" maxlength="4" step="5" min="5" max="1030" id="hdd1"></td>
         <td><input type="number" maxlength="4" step="5" min="5" max="1030" id="hdd1"></td>
-        <input type="button" id="add" value="Add" onclick="Javascript:addRow()"></td>
     </tr>
+    <input type="button" id="add" value="Add" onclick="Javascript:addRow()"></td>
 </table>
 </div>
 <div id="mydata">
-<b>Current data in the system ...</b>
+<b>Веденные данные...</b>
 <table id="myTableData"  border="1" cellpadding="2">
     <tr>
         <td>&nbsp;</td>
