@@ -17,7 +17,7 @@ function addRow() {
     row.insertCell(3).innerHTML= HDD1.value;
     row.insertCell(4).innerHTML= HDD2.value;
     row.insertCell(5).innerHTML= HDD3.value;
-    row.insertCell(6).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+    row.insertCell(6).innerHTML= '<input type="button" value = "Удалить" onClick="Javacsript:deleteRow(this)">';
     
 }
  
