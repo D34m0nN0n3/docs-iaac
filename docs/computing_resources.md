@@ -89,7 +89,7 @@
 <b>Данные для добавления в DNS...</b>
 <table id="myTableData1" cellpadding="2">
     <tr>
-        <th style="min-width:300px"><b>Forword records</b></th>
+        <th style="min-width:300px"><b>Forward records</b></th>
         <th style="min-width:180px"><b>Reverse records</b></th>
     </tr>
 </table>
