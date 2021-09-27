@@ -56,7 +56,9 @@ function deleteRow(obj) {
       
     var index = obj.parentNode.parentNode.rowIndex;
     var table = document.getElementById("myTableData");
+    var table1 = document.getElementById("myTableData1");
     table.deleteRow(index);
+    table1.deleteRow(index);
     
 }
  
