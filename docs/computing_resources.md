@@ -88,9 +88,8 @@
 <b>Веденные данные...</b>
 <table id="myTableData1" cellpadding="2">
     <tr>
-        <th style="min-width:300px"><b>NAME VM</b></th>
-        <th style="min-width:180px"><b>DOMAIN</b></th>
-        <th style="min-width:180px"><b>IP ADDRESS 1</b></th>
+        <th style="min-width:300px"><b>Forword records</b></th>
+        <th style="min-width:180px"><b>Reverse records</b></th>
         <th>&nbsp;</th>
     </tr>
 </table>
