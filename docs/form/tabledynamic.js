@@ -50,16 +50,13 @@ function addRow() {
  
     row.insertCell(0).innerHTML= VMName.value + '.' + DOMAIN.value + '    IN    A    ' + IP1.value;
     row.insertCell(1).innerHTML= 'TO DO';
-    row.insertCell(2).innerHTML= '<input type="button" value = "Удалить" onClick="Javacsript:deleteRow(this)">';
 }
  
 function deleteRow(obj) {
       
     var index = obj.parentNode.parentNode.rowIndex;
     var table = document.getElementById("myTableData");
-    var table1 = document.getElementById("myTableData1");
     table.deleteRow(index);
-    table1.deleteRow(index);
     
 }
  
