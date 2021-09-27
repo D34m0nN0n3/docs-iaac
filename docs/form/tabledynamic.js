@@ -1,5 +1,6 @@
 function addRow() {
           
+    var STAGE = document.getElementById("stage");
     var VMName = document.getElementById("name");
     var OS = document.getElementById("os");
     var CPU = document.getElementById("cpu");
@@ -9,6 +10,7 @@ function addRow() {
     var HDD3 = document.getElementById("hdd3");
     var HDD4 = document.getElementById("hdd4");
     var HDD5 = document.getElementById("hdd5");
+    var DOMAIN = document.getElementById("domain");
     var VLAN1 = document.getElementById("vlan1");
     var IP1 = document.getElementById("ip1");
     var MASK1 = document.getElementById("mask1");
@@ -22,24 +24,26 @@ function addRow() {
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
  
-    row.insertCell(0).innerHTML= VMName.value;
-    row.insertCell(1).innerHTML= OS.value;
-    row.insertCell(2).innerHTML= CPU.value;
-    row.insertCell(3).innerHTML= RAM.value;
-    row.insertCell(4).innerHTML= HDD1.value;
-    row.insertCell(5).innerHTML= HDD2.value;
-    row.insertCell(6).innerHTML= HDD3.value;
-    row.insertCell(7).innerHTML= HDD4.value;
-    row.insertCell(8).innerHTML= HDD5.value;
-    row.insertCell(9).innerHTML= VLAN1.value;
-    row.insertCell(10).innerHTML= IP1.value;
-    row.insertCell(11).innerHTML= MASK1.value;
-    row.insertCell(12).innerHTML= GW1.value;
-    row.insertCell(13).innerHTML= VLAN2.value;
-    row.insertCell(14).innerHTML= IP2.value;
-    row.insertCell(15).innerHTML= MASK2.value;
-    row.insertCell(16).innerHTML= GW2.value;
-    row.insertCell(17).innerHTML= '<input type="button" value = "Удалить" onClick="Javacsript:deleteRow(this)">';
+    row.insertCell(0).innerHTML= STAGE.value;
+    row.insertCell(1).innerHTML= VMName.value;
+    row.insertCell(2).innerHTML= OS.value;
+    row.insertCell(3).innerHTML= CPU.value;
+    row.insertCell(4).innerHTML= RAM.value;
+    row.insertCell(5).innerHTML= HDD1.value;
+    row.insertCell(6).innerHTML= HDD2.value;
+    row.insertCell(7).innerHTML= HDD3.value;
+    row.insertCell(8).innerHTML= HDD4.value;
+    row.insertCell(9).innerHTML= HDD5.value;
+    row.insertCell(10).innerHTML= DOMAIN.value;
+    row.insertCell(11).innerHTML= VLAN1.value;
+    row.insertCell(12).innerHTML= IP1.value;
+    row.insertCell(13).innerHTML= MASK1.value;
+    row.insertCell(14).innerHTML= GW1.value;
+    row.insertCell(15).innerHTML= VLAN2.value;
+    row.insertCell(16).innerHTML= IP2.value;
+    row.insertCell(17).innerHTML= MASK2.value;
+    row.insertCell(18).innerHTML= GW2.value;
+    row.insertCell(19).innerHTML= '<input type="button" value = "Удалить" onClick="Javacsript:deleteRow(this)">';
     
 }
  

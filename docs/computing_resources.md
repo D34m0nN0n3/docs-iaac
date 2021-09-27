@@ -30,8 +30,9 @@
     </tr>
     <tr>
         <td style="min-width:250px"><select name="type" id="type" tabindex="0"><option value="">Выберите из списка</option><option value="выделение">Выделение</option><option value="добавление">Добавление</option><option value="возврат">Возврат</option></select></td>
-        <td style="min-width:300px"><input type="text" placeholder="Имя VM" id="name"></td>
-        <td style="min-width:250px"><select name="type" id="os" tabindex="0"><option value="">Выберите из списка</option><option value="CentOS 7">CentOS 7</option><option value="CentOS 8">CentOS 8</option><option value="Windows 2012">Windows 2012</option><option value="Windows 2016">Windows 2016</option></select></td>
+        <td style="min-width:250px"><select name="stage" id="stage" tabindex="0"><option value="">Выберите из списка</option><option value="продуктив">Продуктив</option><option value="тест">Тест</option><option value="разработка">Разработка</option></select></td>
+        <td style="min-width:300px"><input type="text" maxlength="32" placeholder="Имя VM" id="name"></td>
+        <td style="min-width:250px"><select name="os" id="os" tabindex="0"><option value="">Выберите из списка</option><option value="CentOS 7">CentOS 7</option><option value="CentOS 8">CentOS 8</option><option value="Windows 2012">Windows 2012</option><option value="Windows 2016">Windows 2016</option></select></td>
         <td><input class="mod" type="number" maxlength="2" step="1" min="1" max="20" required placeholder="ШТ" id="cpu"></td>
         <td><input class="mod" type="number" maxlength="3" step="2" min="2" max="256" required placeholder="Гб" id="ram"></td>
         <td><input class="mod" type="number" maxlength="4" step="10" min="50" max="1030" required placeholder="Гб" id="hdd1"></td>
@@ -39,6 +40,7 @@
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd3"></td>
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd4"></td>
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd5"></td>
+        <td style="min-width:150px"><input type="text" minlength="3" maxlength="16" placeholder="Домен *" id="domain"></td>
         <td><input class="mod" type="number" maxlength="4" step="1" min="2" max="4096" required placeholder="VLAN ID" id="vlan1"></td>
         <td style="min-width:180px"><input type="text" minlength="7" maxlength="15" size="15" required pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" placeholder="IP address" id="ip1"></td>
         <td style="min-width:180px"><input type="text" minlength="7" maxlength="15" size="15" required pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" placeholder="Net mask" id="mask1"></td>
@@ -57,8 +59,9 @@
 <b>Веденные данные...</b>
 <table id="myTableData" cellpadding="2">
     <tr>
+        <th style="min-width:180px"><b>STAGE</b></th>
         <th style="min-width:300px"><b>NAME VM</b></th>
-        <th><b>OS</b></th>
+        <th style="min-width:180px"><b>OS</b></th>
         <th><b>CPU</b></th>
         <th><b>RAM</b></th>
         <th><b>HDD 1</b></th>
@@ -66,6 +69,7 @@
         <th><b>HDD 3</b></th>
         <th><b>HDD 4</b></th>
         <th><b>HDD 5</b></th>
+        <th style="min-width:180px"><b>DOMAIN</b></th>
         <th><b>VLAN ID 1</b></th>
         <th style="min-width:180px"><b>IP ADDRESS 1</b></th>
         <th style="min-width:180px"><b>NET MASK 1</b></th>
