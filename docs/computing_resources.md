@@ -85,6 +85,17 @@
 </table>
 &nbsp;
  
+<b>Веденные данные...</b>
+<table id="myTableData1" cellpadding="2">
+    <tr>
+        <th style="min-width:300px"><b>NAME VM</b></th>
+        <th style="min-width:180px"><b>DOMAIN</b></th>
+        <th style="min-width:180px"><b>IP ADDRESS 1</b></th>
+        <th>&nbsp;</th>
+    </tr>
+</table>
+&nbsp;
+ 
 </div>
 
 ## Информация для открытия сетевого доступа

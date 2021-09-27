@@ -20,6 +20,7 @@ function addRow() {
     var MASK2 = document.getElementById("mask2");
     var GW2 = document.getElementById("gw2");
     var table = document.getElementById("myTableData");
+    var table1 = document.getElementById("myTableData1");
  
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
@@ -45,6 +46,12 @@ function addRow() {
     row.insertCell(18).innerHTML= GW2.value;
     row.insertCell(19).innerHTML= '<input type="button" value = "Удалить" onClick="Javacsript:deleteRow(this)">';
     
+    var row = table1.insertRow(rowCount);
+ 
+    row.insertCell(0).innerHTML= VMName.value;
+    row.insertCell(1).innerHTML= DOMAIN.value;
+    row.insertCell(2).innerHTML= IP1.value;
+    row.insertCell(3).innerHTML= '<input type="button" value = "Удалить" onClick="Javacsript:deleteRow(this)">';
 }
  
 function deleteRow(obj) {
