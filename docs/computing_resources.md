@@ -20,7 +20,7 @@
         <th>Объем HDD 3 в Гб</th>
         <th>Объем HDD 4 в Гб</th>
         <th>Объем HDD 5 в Гб</th>
-        <th>Домен</th>
+        <th>Домен *</th>
         <th>VLAN ID интерфейс 1 *</th>
         <th>IP address интерфейс 1 *</th>
         <th>Маска сети интерфейс 1 *</th>
@@ -42,7 +42,7 @@
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd3"></td>
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd4"></td>
         <td><input class="mod" type="number" maxlength="4" step="5" min="5" max="1030" required placeholder="Гб" id="hdd5"></td>
-        <td style="min-width:150px"><input type="text" minlength="3" maxlength="16" placeholder="Домен *" id="domain"></td>
+        <td style="min-width:150px"><input type="text" minlength="3" maxlength="16" placeholder="Домен" id="domain"></td>
         <td><input class="mod" type="number" maxlength="4" step="1" min="2" max="4096" required placeholder="VLAN ID" id="vlan1"></td>
         <td style="min-width:180px"><input type="text" minlength="7" maxlength="15" size="15" required pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" placeholder="IP address" id="ip1"><span class="validity"></span></td>
         <td style="min-width:180px"><input type="text" minlength="7" maxlength="15" size="15" required pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" placeholder="Net mask" id="mask1"><span class="validity"></span></td>
