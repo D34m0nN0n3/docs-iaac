@@ -29,6 +29,7 @@
         <th>IP address интерфейс 2</th>
         <th>Маска сети интерфейс 2</th>
         <th>Шлюз по умолчанию интерфейс 2</th>
+        <th>Ответственный администратор</th>
     </tr>
     <tr>
         <td style="min-width:250px"><select name="type" id="type" tabindex="0"><option value="">Выберите из списка</option><option value="выделение">Выделение</option><option value="добавление">Добавление</option><option value="возврат">Возврат</option></select></td>
@@ -51,6 +52,7 @@
         <td style="min-width:180px"><input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="ip2"><span class="validity"></span></td>
         <td style="min-width:180px"><input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="Net mask" id="mask2"><span class="validity"></span></td>
         <td style="min-width:180px"><input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="Gateway" id="gw2"><span class="validity"></span></td>
+        <td style="min-width:300px"><input type="text" maxlength="64" placeholder="ФИО" id="owner"></td>
     </tr>
 </table>
 <input type="button" id="add" value="Добавить веденные данные в таблицу" onclick="Javascript:addRow()">
@@ -58,10 +60,9 @@
  
 </div>
 <div id="mydata">
-<b>Веденные данные...</b>
+<b>Данные для создания/изменения/удаления ресурсов...</b>
 <table id="myTableData" cellpadding="2">
     <tr>
-        <th style="min-width:180px"><b>STAGE</b></th>
         <th style="min-width:300px"><b>NAME VM</b></th>
         <th style="min-width:180px"><b>OS</b></th>
         <th><b>CPU</b></th>
@@ -85,7 +86,7 @@
 </table>
 &nbsp;
  
-<b>Веденные данные...</b>
+<b>Данные для добавления в DNS...</b>
 <table id="myTableData1" cellpadding="2">
     <tr>
         <th style="min-width:300px"><b>Forword records</b></th>
