@@ -49,7 +49,8 @@ function addRow() {
     var row = table1.insertRow(rowCount);
  
     row.insertCell(0).innerHTML= VMName.value + '.' + DOMAIN.value + '    IN    A    ' + IP1.value;
-    row.insertCell(3).innerHTML= '<input type="button" value = "Удалить" onClick="Javacsript:deleteRow(this)">';
+    row.insertCell(1).innerHTML= 'TO DO';
+    row.insertCell(2).innerHTML= '<input type="button" value = "Удалить" onClick="Javacsript:deleteRow(this)">';
 }
  
 function deleteRow(obj) {
