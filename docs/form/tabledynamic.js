@@ -52,8 +52,8 @@ function addRow() {
     
     var row = table1.insertRow(rowCount);
  
-    row.insertCell(0).innerHTML= VMName.value + '.' + DOMAIN.value + '&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;' + IP1.value;
-    row.insertCell(1).innerHTML= PTR + '.in-addr.arpa&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;PTR&nbsp;&nbsp;&nbsp;&nbsp;' + VMName.value + '.' + DOMAIN.value;
+    row.insertCell(0).innerHTML= VMName.value + '.' + DOMAIN.value + '.' + '&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;' + IP1.value;
+    row.insertCell(1).innerHTML= PTR + '.in-addr.arpa.&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;PTR&nbsp;&nbsp;&nbsp;&nbsp;' + VMName.value + '.' + DOMAIN.value + '.';
 }
  
 function deleteRow(obj) {
