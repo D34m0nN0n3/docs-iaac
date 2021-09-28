@@ -23,9 +23,9 @@ function addRow() {
     var table1 = document.getElementById("myTableData1");
  
     let reversip = IP1.value;
-    let ptrip = reversip.split(".").reverse().join("");
+    let ptrip = reversip.split(".").reverse();
 
-    var PTR = ptrip.value;
+    var PTR = ptrip.join(".");
  
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
