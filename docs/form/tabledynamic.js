@@ -25,8 +25,6 @@ function addRow() {
     let reversip = IP1.value;
     let ptrip = reversip.split(".").reverse().join("");
  
-    console.log(ptrip);
- 
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
  
@@ -53,7 +51,7 @@ function addRow() {
     var row = table1.insertRow(rowCount);
  
     row.insertCell(0).innerHTML= VMName.value + '.' + DOMAIN.value + '&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;' + IP1.value;
-    row.insertCell(1).innerHTML= splitString;
+    row.insertCell(1).innerHTML= ptrip.value;
 }
  
 function deleteRow(obj) {
