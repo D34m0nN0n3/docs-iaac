@@ -22,9 +22,10 @@ function addRow() {
     var table = document.getElementById("myTableData");
     var table1 = document.getElementById("myTableData1");
  
-    let rip = IP1.split(".").reverse().join("");
+    let reversip = IP1.value;
+    let ptrip = reversip.split(".").reverse().join("");
  
-    console.log(rip);
+    console.log(ptrip);
  
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
