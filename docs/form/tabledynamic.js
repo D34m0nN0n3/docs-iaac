@@ -13,7 +13,6 @@ function addRow() {
     var DOMAIN = document.getElementById("domain");
     var VLAN1 = document.getElementById("vlan1");
     var IP1 = document.getElementById("ip1");
-    var PTR1 = IP1.split(".").reverse().join("");
     var MASK1 = document.getElementById("mask1");
     var GW1 = document.getElementById("gw1");
     var VLAN2 = document.getElementById("vlan2");
@@ -22,6 +21,10 @@ function addRow() {
     var GW2 = document.getElementById("gw2");
     var table = document.getElementById("myTableData");
     var table1 = document.getElementById("myTableData1");
+ 
+    let rip = IP1.split(".").reverse().join("");
+ 
+    console.log(rip);
  
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
@@ -49,7 +52,7 @@ function addRow() {
     var row = table1.insertRow(rowCount);
  
     row.insertCell(0).innerHTML= VMName.value + '.' + DOMAIN.value + '&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;' + IP1.value;
-    row.insertCell(1).innerHTML= PTR1.value;
+    row.insertCell(1).innerHTML= splitString;
 }
  
 function deleteRow(obj) {
