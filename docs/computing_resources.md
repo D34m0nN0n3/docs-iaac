@@ -95,6 +95,17 @@
 </table>
 &nbsp;
  
+<b>Данные для открытия сетевого доступа...</b>
+<table id="myTableData2" cellpadding="2">
+    <tr>
+        <th style="min-width:180px"><b>Source</b></th>
+        <th style="min-width:180px"><b>Destination</b></th>
+        <th style="min-width:180px"><b>Ports</b></th>
+        <th style="min-width:180px"><b>Application</b></th>
+    </tr>
+</table>
+&nbsp;
+ 
 </div>
 
 ## Информация для открытия сетевого доступа
