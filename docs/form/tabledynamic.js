@@ -62,11 +62,11 @@ function addRow() {
     row1.insertCell(0).innerHTML= '<input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="srcip1"><span class="validity"></span>';
     row1.insertCell(1).innerHTML= IP1.value;
     row1.insertCell(2).innerHTML= '<input type="text" minlength="2" maxlength="5" placeholder="Ports" id="dports">';
-    row1.insertCell(3).innerHTML= '<input type="text" minlength="3" maxlength="8" id="dapp">';
+    row1.insertCell(3).innerHTML= '<input type="text" minlength="3" maxlength="32" id="dapp">';
     row2.insertCell(0).innerHTML= IP1.value;
     row2.insertCell(1).innerHTML= '<input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="destip1"><span class="validity"></span>';
     row2.insertCell(2).innerHTML= '<input type="text" minlength="2" maxlength="5" placeholder="Ports" id="sports">';
-    row2.insertCell(3).innerHTML= '<input type="text" minlength="3" maxlength="8" id="sapp">';
+    row2.insertCell(3).innerHTML= '<input type="text" minlength="3" maxlength="32" id="sapp">';
 }
  
 function deleteRow(obj) {
