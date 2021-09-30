@@ -57,7 +57,7 @@ function addRow() {
     row.insertCell(1).innerHTML= PTR + '.in-addr.arpa.&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;PTR&nbsp;&nbsp;&nbsp;&nbsp;' + VMName.value + '.' + DOMAIN.value + '.';
  
     var row1 = table2.insertRow(rowCount);
-    var row2 = table2.insertRow(rowCount+1);
+    var row2 = table2.insertRow(rowCount+rowCount);
  
     row1.insertCell(0).innerHTML= '<input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="srcip1"><span class="validity"></span>';
     row1.insertCell(1).innerHTML= IP1.value;
