@@ -78,6 +78,7 @@ function deleteRow(obj) {
     table.deleteRow(index);
     table1.deleteRow(index);
     table2.deleteRow(index);
+    table2.deleteRow(index+1);
     
 }
  
