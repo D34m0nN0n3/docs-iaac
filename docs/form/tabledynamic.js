@@ -61,12 +61,12 @@ function addRow() {
  
     row1.insertCell(0).innerHTML= '<input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="srcip1"><span class="validity"></span>';
     row1.insertCell(1).innerHTML= IP1.value;
-    row1.insertCell(2).innerHTML= '<input type="text" minlength="2" maxlength="5" placeholder="Ports" id="ports">';
-    row1.insertCell(3).innerHTML= '<select name="appin" id="appin" tabindex="0"><option value="">Выберите из списка</option><option value=" "> </option><option value=" "> </option><option value=" "> </option></select';
+    row1.insertCell(2).innerHTML= '<input type="text" minlength="2" maxlength="5" placeholder="Ports" id="dports">';
+    row1.insertCell(3).innerHTML= '<input type="text" minlength="3" maxlength="8" id="dapp">';
     row2.insertCell(0).innerHTML= IP1.value;
     row2.insertCell(1).innerHTML= '<input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="destip1"><span class="validity"></span>';
-    row2.insertCell(2).innerHTML= '<input type="text" minlength="2" maxlength="5" placeholder="Ports" id="ports">';
-    row2.insertCell(3).innerHTML= '<select name="appout" id="appout" tabindex="0"><option value="">Выберите из списка</option><option value=" "> </option><option value=" "> </option><option value=" "> </option></select';
+    row2.insertCell(2).innerHTML= '<input type="text" minlength="2" maxlength="5" placeholder="Ports" id="sports">';
+    row2.insertCell(3).innerHTML= '<input type="text" minlength="3" maxlength="8" id="sapp">';
 }
  
 function deleteRow(obj) {
@@ -74,10 +74,8 @@ function deleteRow(obj) {
     var index = obj.parentNode.parentNode.rowIndex;
     var table = document.getElementById("myTableData");
     var table1 = document.getElementById("myTableData1");
-    var table2 = document.getElementById("myTableData2");
     table.deleteRow(index);
     table1.deleteRow(index);
-    table2.deleteRow(index);
     
 }
  
