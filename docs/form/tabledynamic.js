@@ -21,6 +21,7 @@ function addRow() {
     var GW2 = document.getElementById("gw2");
     var table = document.getElementById("myTableData");
     var table1 = document.getElementById("myTableData1");
+    var table2 = document.getElementById("myTableData2");
  
     let reversip = IP1.value;
     let ptrip = reversip.split(".").reverse();
