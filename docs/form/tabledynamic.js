@@ -56,16 +56,17 @@ function addRow() {
     row.insertCell(0).innerHTML= VMName.value + '.' + DOMAIN.value + '.' + '&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;' + IP1.value;
     row.insertCell(1).innerHTML= PTR + '.in-addr.arpa.&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;PTR&nbsp;&nbsp;&nbsp;&nbsp;' + VMName.value + '.' + DOMAIN.value + '.';
  
-    var row = table2.insertRow(rowCount);
+    var row0 = table2.insertRow(0);
+    var row1 = table2.insertRow(1);
  
-    row.insertCell(0).innerHTML= '<input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="srcip1"><span class="validity"></span>';
-    row.insertCell(1).innerHTML= IP1.value;
-    row.insertCell(2).innerHTML= '<input type="text" minlength="2" maxlength="5" placeholder="Ports" id="ports">';
-    row.insertCell(3).innerHTML= '<select name="appin" id="appin" tabindex="0"><option value="">Выберите из списка</option><option value=" "> </option><option value=" "> </option><option value=" "> </option></select';
-    row.insertCell(0).innerHTML= IP1.value;
-    row.insertCell(1).innerHTML= '<input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="destip1"><span class="validity"></span>';
-    row.insertCell(2).innerHTML= '<input type="text" minlength="2" maxlength="5" placeholder="Ports" id="ports">';
-    row.insertCell(3).innerHTML= '<select name="appout" id="appout" tabindex="0"><option value="">Выберите из списка</option><option value=" "> </option><option value=" "> </option><option value=" "> </option></select';
+    row0.insertCell(0).innerHTML= '<input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="srcip1"><span class="validity"></span>';
+    row0.insertCell(1).innerHTML= IP1.value;
+    row0.insertCell(2).innerHTML= '<input type="text" minlength="2" maxlength="5" placeholder="Ports" id="ports">';
+    row0.insertCell(3).innerHTML= '<select name="appin" id="appin" tabindex="0"><option value="">Выберите из списка</option><option value=" "> </option><option value=" "> </option><option value=" "> </option></select';
+    row1.insertCell(0).innerHTML= IP1.value;
+    row1.insertCell(1).innerHTML= '<input type="text" minlength="7" maxlength="15" size="15" required pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" placeholder="IP address" id="destip1"><span class="validity"></span>';
+    row1.insertCell(2).innerHTML= '<input type="text" minlength="2" maxlength="5" placeholder="Ports" id="ports">';
+    row1.insertCell(3).innerHTML= '<select name="appout" id="appout" tabindex="0"><option value="">Выберите из списка</option><option value=" "> </option><option value=" "> </option><option value=" "> </option></select';
 }
  
 function deleteRow(obj) {
